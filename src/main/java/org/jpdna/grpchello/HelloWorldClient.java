@@ -52,7 +52,7 @@ public class HelloWorldClient {
      */
     public HelloWorldClient(String host, int port) {
         channel = ManagedChannelBuilder.forAddress(host, port)
-                                       //.usePlaintext(true)
+                                       .usePlaintext(true)
                                        .build();
         blockingStub = GreeterGrpc.newBlockingStub(channel);
     }
